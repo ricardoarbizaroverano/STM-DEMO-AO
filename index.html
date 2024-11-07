@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bundle.css" />
+    <title>La Máquina Sonora del Tiempo (DEMO)</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="bundle.js"></script>
+    <script>
+      
+      
+      
+      
+
+      // Any value specified in config.js may be overwritten here without having to rebuild the app.
+      const config = {
+  "LOCAL_SESSION_ID_PREFIX": "bbcat-orchestration-template",
+  "INITIAL_CONTENT_ID": "30ba5257-c31d-4a03-8dd7-b357756c29e9",
+  "SEQUENCE_URLS": [
+    {
+      "name": "MST-DEMO",
+      "contentId": "30ba5257-c31d-4a03-8dd7-b357756c29e9",
+      "url": "audio/30ba5257-c31d-4a03-8dd7-b357756c29e9/sequence.json",
+      "hold": false,
+      "skippable": true,
+      "instructions": true,
+      "next": [
+        {
+          "contentId": "30ba5257-c31d-4a03-8dd7-b357756c29e9",
+          "label": "Escuchar nuevamente"
+        }
+      ]
+    }
+  ],
+  "CONTROLS": [],
+  "CLOUDSYNC_ENDPOINT": {
+    "hostname": "cloudsync.virt.ch.bbc.co.uk"
+  },
+  "TEXT_TITLE": "La Máquina Sonora del Tiempo (DEMO)",
+  "TEXT_SUBTITLE": "by Ricardo Arbiza",
+  "TEXT_INTRODUCTION": "Introduction",
+  "TEXT_START_LABEL": "Comenzar sesión",
+  "TEXT_JOIN_LABEL": "Unirme a nueva sesión",
+  "ACCENT_COLOUR": "#000050",
+  "DEBUG_UI": true,
+  "ENABLE_TUTORIAL": false,
+  "MDO_COMPRESSOR_RATIO": 2,
+  "MDO_COMPRESSOR_THRESHOLD": 0,
+  "OBJECT_FADE_OUT_DURATION": 0,
+  "PLAYER_IMAGE_URL": "images/b334f032-9c91-4c9a-8c66-30c04ec805a4.png",
+  "TEXT_PLAYER_IMAGE_ALT": ""
+};
+
+      // Instantiate the React app to render into the #app div:
+      initOrchestrationTemplate(document.getElementById('app'), config);
+    </script>
+    <noscript>
+      This page requires JavaScript to be enabled.
+    </noscript>
+  </body>
+</html>
